@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var fs = require('fs');
+
 // isPrime 
 // return true if n is a prime number, else return false 
 var isPrime = function(n) {
@@ -36,5 +38,5 @@ var fmt = function(arr) {
 };
 
 var k = 100;
-console.log("firstkprime(" + k + ")");
-console.log(fmt(firstkprime(k)));
+var outfile = "prime.txt";
+fs.writeFileSync(outfile, fmt(firstkprime(k)));
